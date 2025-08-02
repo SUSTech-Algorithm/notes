@@ -7,17 +7,21 @@ PID (proportion integration differentiation)==**比例**, **积分**, **微分�
 ## :smile: Proportion 比例控制
 
 通過參數`Kp`構建`u`與`error`之間的線性關係
+
 $$
 U(t) = kp*error(t)
 $$
+
 **缺點:** 容易出現穩態誤差
 
 ## :tent: Integration 積分控制
 
 通過參數`Ki`構建`u`與$\int$ error之間的線性關係
+
 $$
 U(t) = ki*\int error(t)dt
 $$
+
 可以解決穩態誤差的問題
 
 ## :anger: Differentiation 微分控制
@@ -26,9 +30,11 @@ $$
 -----------**目的是爲了避免剎車不到位而超過停車顯**-----------
 
 通過參數`Kd`構建`u`與`derror`之間的線性關係
+
 $$
 U(t)=ki*d(error(t)) 
 $$
+
 **注意**: 這裏的derror一定是負的,
 也就是說kd的作用就是**使error震盪減少**
 
