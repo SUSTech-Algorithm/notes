@@ -12,7 +12,7 @@ U(t) = kp*error(t)
 $$
 **缺點:** 容易出現穩態誤差
 
-## :laugh: Integration 積分控制
+## :tent: Integration 積分控制
 
 通過參數`Ki`構建`u`與$\int$ error之間的線性關係
 $$
