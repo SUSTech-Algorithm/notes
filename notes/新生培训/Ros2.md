@@ -198,6 +198,29 @@ if __name__ == '__main__':
 ```
 
 `package.xml` 菜单，列出所有需要的依赖
+
+```
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+
+  <name>my_first_package</name>
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="fjienan@example.com">jienan</maintainer>
+  <license>TODO: License declaration</license>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+```
+
 `setup.py`
 ```
 from setuptools import find_packages, setup
@@ -246,6 +269,7 @@ source install/setup.bash
 ros2 run my_first_package my_first_node
 ```
 $$之后演示一下Posestamp消息的发送效果以及rqt结构$$
+
 恭喜！你已经成功创建并运行了你的第一个 ROS 2 节点！
 
 -----
@@ -273,7 +297,6 @@ $$之后演示一下Posestamp消息的发送效果以及rqt结构$$
 
 希望这份大纲能帮助你顺利完成培训！如果你对其中的某个环节需要更详细的讲解，请随时告诉我。
 
-#
 
 其他参考资料：
 **官方教学文档** https://docs.ros.org/en/humble/index.html
