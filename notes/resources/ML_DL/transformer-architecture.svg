@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="470" viewBox="0 0 1180 470">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#546e7a"/>
+    </marker>
+    <style>
+      .title { font-family: "Noto Sans Mono CJK SC"; font-size: 24px; font-weight: 700; fill: #263238; }
+      .heading { font-family: "Noto Sans Mono CJK SC"; font-size: 18px; font-weight: 700; fill: #263238; }
+      .text { font-family: "Noto Sans Mono CJK SC"; font-size: 15px; fill: #37474f; }
+      .small { font-family: "Noto Sans Mono CJK SC"; font-size: 13px; fill: #546e7a; }
+      .box { stroke: #546e7a; stroke-width: 2; rx: 12; }
+      .arrow { stroke: #546e7a; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1180" height="470" fill="#ffffff"/>
+  <text x="590" y="36" text-anchor="middle" class="title">Transformer 从输入到下游任务的整体结构</text>
+
+  <rect x="25" y="170" width="125" height="76" class="box" fill="#e3f2fd"/>
+  <text x="87" y="199" text-anchor="middle" class="heading">输入数据</text>
+  <text x="87" y="224" text-anchor="middle" class="small">文字 / 图像</text>
+
+  <rect x="185" y="170" width="125" height="76" class="box" fill="#e8f5e9"/>
+  <text x="247" y="199" text-anchor="middle" class="heading">切分</text>
+  <text x="247" y="224" text-anchor="middle" class="small">token / Patch</text>
+
+  <rect x="345" y="154" width="155" height="108" class="box" fill="#fff3e0"/>
+  <text x="422" y="187" text-anchor="middle" class="heading">Embedding</text>
+  <text x="422" y="215" text-anchor="middle" class="text">转换成向量</text>
+  <text x="422" y="241" text-anchor="middle" class="small">+ 位置信息</text>
+
+  <path d="M150 208 L182 208" class="arrow"/>
+  <path d="M310 208 L342 208" class="arrow"/>
+  <path d="M500 208 L538 208" class="arrow"/>
+
+  <rect x="540" y="74" width="300" height="282" class="box" fill="#f7f9fc"/>
+  <text x="690" y="105" text-anchor="middle" class="heading">Transformer 模块 × N</text>
+
+  <rect x="578" y="128" width="224" height="54" class="box" fill="#d1ecf1"/>
+  <text x="690" y="161" text-anchor="middle" class="heading">Multi-Head Attention</text>
+
+  <rect x="610" y="198" width="160" height="38" class="box" fill="#eceff1"/>
+  <text x="690" y="223" text-anchor="middle" class="small">残差连接 + 归一化</text>
+  <path d="M690 182 L690 195" class="arrow"/>
+
+  <rect x="578" y="252" width="224" height="54" class="box" fill="#e8eaf6"/>
+  <text x="690" y="275" text-anchor="middle" class="heading">MLP</text>
+  <text x="690" y="296" text-anchor="middle" class="small">模块内部的信息加工</text>
+  <path d="M690 236 L690 249" class="arrow"/>
+
+  <rect x="610" y="320" width="160" height="38" class="box" fill="#eceff1"/>
+  <text x="690" y="345" text-anchor="middle" class="small">残差连接 + 归一化</text>
+  <path d="M690 306 L690 317" class="arrow"/>
+
+  <path d="M840 208 L882 208" class="arrow"/>
+  <rect x="885" y="166" width="130" height="84" class="box" fill="#f3e5f5"/>
+  <text x="950" y="198" text-anchor="middle" class="heading">特征表示</text>
+  <text x="950" y="224" text-anchor="middle" class="small">主干网络输出</text>
+
+  <path d="M1015 208 L1050 208" class="arrow"/>
+  <rect x="1052" y="78" width="108" height="70" class="box" fill="#ffebee"/>
+  <text x="1106" y="105" text-anchor="middle" class="heading">分类头</text>
+  <text x="1106" y="130" text-anchor="middle" class="small">全连接 / MLP</text>
+  <rect x="1052" y="174" width="108" height="70" class="box" fill="#fff8e1"/>
+  <text x="1106" y="201" text-anchor="middle" class="heading">生成头</text>
+  <text x="1106" y="226" text-anchor="middle" class="small">词表映射</text>
+  <rect x="1052" y="270" width="108" height="70" class="box" fill="#e8f5e9"/>
+  <text x="1106" y="297" text-anchor="middle" class="heading">视觉头</text>
+  <text x="1106" y="322" text-anchor="middle" class="small">检测 / 深度等</text>
+  <path d="M1035 208 C1035 113,1040 113,1049 113" class="arrow"/>
+  <path d="M1035 208 L1049 208" class="arrow"/>
+  <path d="M1035 208 C1035 305,1040 305,1049 305" class="arrow"/>
+
+  <rect x="318" y="400" width="544" height="48" rx="12" fill="#fafafa" stroke="#b0bec5" stroke-width="1.5"/>
+  <text x="590" y="430" text-anchor="middle" class="text">模块内部的 MLP 负责加工特征；最后的任务头负责把特征变成具体结果</text>
+</svg>

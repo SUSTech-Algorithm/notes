@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="420" viewBox="0 0 1040 420">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#52616b"/>
+    </marker>
+    <style>
+      .title { font-family: "Noto Sans Mono CJK SC"; font-size: 22px; font-weight: 700; fill: #263238; }
+      .label { font-family: "Noto Sans Mono CJK SC"; font-size: 17px; font-weight: 600; fill: #263238; }
+      .small { font-family: "Noto Sans Mono CJK SC"; font-size: 15px; fill: #455a64; }
+      .box { stroke: #455a64; stroke-width: 2; rx: 14; }
+      .arrow { stroke: #52616b; stroke-width: 2.4; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1040" height="420" fill="#ffffff"/>
+
+  <text x="245" y="38" text-anchor="middle" class="title">Attention：按相关性从各位置取信息</text>
+  <rect x="35" y="72" width="125" height="58" class="box" fill="#e3f2fd"/>
+  <text x="97" y="97" text-anchor="middle" class="label">Query</text>
+  <text x="97" y="119" text-anchor="middle" class="small">我在找什么？</text>
+
+  <rect x="207" y="60" width="132" height="48" class="box" fill="#fff3e0"/>
+  <text x="273" y="90" text-anchor="middle" class="label">Key 1</text>
+  <rect x="207" y="122" width="132" height="48" class="box" fill="#fff3e0"/>
+  <text x="273" y="152" text-anchor="middle" class="label">Key 2</text>
+  <rect x="207" y="184" width="132" height="48" class="box" fill="#fff3e0"/>
+  <text x="273" y="214" text-anchor="middle" class="label">Key 3</text>
+
+  <path d="M160 94 L204 84" class="arrow"/>
+  <path d="M160 101 L204 143" class="arrow"/>
+  <path d="M160 108 L204 202" class="arrow"/>
+
+  <text x="380" y="88" class="small">相关性 0.1</text>
+  <text x="380" y="150" class="small" fill="#1976d2">相关性 0.8</text>
+  <text x="380" y="212" class="small">相关性 0.1</text>
+
+  <rect x="187" y="270" width="92" height="48" class="box" fill="#e8f5e9"/>
+  <text x="233" y="300" text-anchor="middle" class="label">Value 1</text>
+  <rect x="294" y="270" width="92" height="48" class="box" fill="#c8e6c9"/>
+  <text x="340" y="300" text-anchor="middle" class="label">Value 2</text>
+  <rect x="401" y="270" width="92" height="48" class="box" fill="#e8f5e9"/>
+  <text x="447" y="300" text-anchor="middle" class="label">Value 3</text>
+  <path d="M233 322 L305 362" class="arrow"/>
+  <path d="M340 322 L340 357" class="arrow"/>
+  <path d="M447 322 L375 362" class="arrow"/>
+  <rect x="272" y="360" width="136" height="45" class="box" fill="#d1c4e9"/>
+  <text x="340" y="388" text-anchor="middle" class="label">加权汇总</text>
+
+  <line x1="535" y1="42" x2="535" y2="392" stroke="#cfd8dc" stroke-width="2"/>
+  <text x="785" y="38" text-anchor="middle" class="title">Transformer：逐层更新每个 token 的表示</text>
+
+  <rect x="575" y="70" width="150" height="62" class="box" fill="#e3f2fd"/>
+  <text x="650" y="96" text-anchor="middle" class="label">输入 token</text>
+  <text x="650" y="119" text-anchor="middle" class="small">词向量</text>
+  <rect x="800" y="70" width="185" height="62" class="box" fill="#fff3e0"/>
+  <text x="892" y="96" text-anchor="middle" class="label">位置信息</text>
+  <text x="892" y="119" text-anchor="middle" class="small">告诉模型先后顺序</text>
+  <path d="M725 101 L797 101" class="arrow"/>
+
+  <rect x="680" y="172" width="220" height="60" class="box" fill="#d1ecf1"/>
+  <text x="790" y="198" text-anchor="middle" class="label">Self-Attention</text>
+  <text x="790" y="220" text-anchor="middle" class="small">让各位置交换信息</text>
+  <path d="M790 132 L790 169" class="arrow"/>
+
+  <rect x="680" y="270" width="220" height="60" class="box" fill="#e8eaf6"/>
+  <text x="790" y="296" text-anchor="middle" class="label">MLP</text>
+  <text x="790" y="318" text-anchor="middle" class="small">分别加工每个位置的信息</text>
+  <path d="M790 232 L790 267" class="arrow"/>
+
+  <rect x="680" y="365" width="220" height="42" class="box" fill="#f3e5f5"/>
+  <text x="790" y="392" text-anchor="middle" class="label">更新后的表示</text>
+  <path d="M790 330 L790 362" class="arrow"/>
+  <path d="M905 300 C980 300,980 202,903 202" class="arrow"/>
+  <text x="965" y="255" text-anchor="middle" class="small">重复多层</text>
+</svg>

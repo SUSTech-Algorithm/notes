@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+  <title id="title">针孔相机模型</title>
+  <desc id="desc">展示三维点经过相机光心投影到虚拟成像平面，并通过相似三角形得到 x 等于 fX 除以 Z。</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1e293b" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="650" rx="28" fill="url(#background)"/>
+  <text x="600" y="48" text-anchor="middle" font-family="sans-serif" font-size="29" font-weight="700" fill="#172554">Pinhole camera model</text>
+  <text x="600" y="78" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#64748b">A 3D point, the optical center and its image lie on the same ray</text>
+
+  <g filter="url(#shadow)">
+    <rect x="55" y="105" width="1090" height="360" rx="20" fill="#ffffff"/>
+  </g>
+
+  <line x1="135" y1="315" x2="1080" y2="315" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1070" y="301" font-family="sans-serif" font-size="17" font-weight="700" fill="#475569">Z</text>
+  <text x="140" y="340" font-family="sans-serif" font-size="15" fill="#64748b">optical axis</text>
+
+  <circle cx="250" cy="315" r="9" fill="#f59e0b" stroke="#ffffff" stroke-width="3"/>
+  <text x="250" y="291" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#b45309">O</text>
+  <text x="250" y="356" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#64748b">optical center</text>
+
+  <line x1="520" y1="145" x2="520" y2="430" stroke="#2563eb" stroke-width="5"/>
+  <text x="520" y="132" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#1d4ed8">virtual image plane</text>
+
+  <line x1="1000" y1="315" x2="1000" y2="145" stroke="#ef4444" stroke-width="5" marker-end="url(#arrow)"/>
+  <circle cx="1000" cy="145" r="8" fill="#ef4444"/>
+  <text x="1018" y="142" font-family="sans-serif" font-size="18" font-weight="700" fill="#b91c1c">P(X, Z)</text>
+  <text x="1017" y="235" font-family="sans-serif" font-size="16" fill="#b91c1c">X</text>
+
+  <line x1="250" y1="315" x2="1000" y2="145" stroke="#ef4444" stroke-width="2.5"/>
+  <circle cx="520" cy="254" r="8" fill="#2563eb" stroke="#ffffff" stroke-width="3"/>
+  <text x="538" y="247" font-family="sans-serif" font-size="18" font-weight="700" fill="#1d4ed8">p(x)</text>
+
+  <line x1="250" y1="401" x2="520" y2="401" stroke="#475569" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="385" y="392" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#475569">f</text>
+  <line x1="250" y1="438" x2="1000" y2="438" stroke="#475569" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  <text x="625" y="429" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#475569">Z</text>
+
+  <g transform="translate(665 255)">
+    <rect width="225" height="95" rx="15" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="112" y="37" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#475569">similar triangles</text>
+    <text x="112" y="70" text-anchor="middle" font-family="serif" font-size="26" font-weight="700" fill="#172554">x = fX / Z</text>
+  </g>
+
+  <text x="600" y="500" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="700" fill="#334155">Complete projection pipeline</text>
+
+  <g transform="translate(50 525)">
+    <rect width="210" height="78" rx="14" fill="#ffffff" stroke="#94a3b8" stroke-width="2"/>
+    <text x="105" y="29" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#64748b">world coordinates</text>
+    <text x="105" y="57" text-anchor="middle" font-family="monospace" font-size="19" font-weight="700" fill="#172554">[Xw, Yw, Zw]</text>
+  </g>
+  <line x1="265" y1="564" x2="325" y2="564" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="295" y="550" text-anchor="middle" font-family="serif" font-size="17" font-weight="700" fill="#475569">R, t</text>
+
+  <g transform="translate(330 525)">
+    <rect width="210" height="78" rx="14" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+    <text x="105" y="29" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#64748b">camera coordinates</text>
+    <text x="105" y="57" text-anchor="middle" font-family="monospace" font-size="19" font-weight="700" fill="#172554">[Xc, Yc, Zc]</text>
+  </g>
+  <line x1="545" y1="564" x2="605" y2="564" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="575" y="550" text-anchor="middle" font-family="serif" font-size="16" font-weight="700" fill="#475569">÷ Zc</text>
+
+  <g transform="translate(610 525)">
+    <rect width="210" height="78" rx="14" fill="#ffffff" stroke="#22c55e" stroke-width="2"/>
+    <text x="105" y="29" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#64748b">normalized plane</text>
+    <text x="105" y="57" text-anchor="middle" font-family="monospace" font-size="19" font-weight="700" fill="#172554">[xn, yn, 1]</text>
+  </g>
+  <line x1="825" y1="564" x2="885" y2="564" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="855" y="550" text-anchor="middle" font-family="serif" font-size="18" font-weight="700" fill="#475569">K</text>
+
+  <g transform="translate(890 525)">
+    <rect width="260" height="78" rx="14" fill="#172554"/>
+    <text x="130" y="29" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#bfdbfe">pixel coordinates</text>
+    <text x="130" y="58" text-anchor="middle" font-family="monospace" font-size="20" font-weight="700" fill="#ffffff">[u, v, 1]</text>
+  </g>
+</svg>

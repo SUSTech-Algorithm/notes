@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="460" viewBox="0 0 960 460" role="img" aria-labelledby="title desc">
+  <title id="title">单个神经元的计算过程</title>
+  <desc id="desc">三个输入分别乘以权重，和偏置一起进入加权求和，再经过激活函数得到输出。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="460" rx="18" fill="#f8fafc"/>
+  <text x="480" y="42" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#172033">单个神经元的计算过程</text>
+
+  <!-- Connections -->
+  <g stroke="#64748b" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+    <line x1="156" y1="125" x2="330" y2="205"/>
+    <line x1="156" y1="220" x2="330" y2="220"/>
+    <line x1="156" y1="315" x2="330" y2="235"/>
+    <line x1="380" y1="220" x2="515" y2="220"/>
+    <line x1="700" y1="220" x2="795" y2="220"/>
+    <line x1="355" y1="350" x2="355" y2="252"/>
+  </g>
+
+  <!-- Inputs -->
+  <g font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="700" text-anchor="middle">
+    <circle cx="125" cy="125" r="31" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <circle cx="125" cy="220" r="31" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <circle cx="125" cy="315" r="31" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="125" y="133" fill="#1e3a8a">x1</text>
+    <text x="125" y="228" fill="#1e3a8a">x2</text>
+    <text x="125" y="323" fill="#1e3a8a">x3</text>
+  </g>
+  <text x="125" y="375" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" fill="#475569">输入 Inputs</text>
+
+  <!-- Weight labels -->
+  <g font-family="DejaVu Sans, sans-serif" font-size="18" font-style="italic" fill="#475569">
+    <text x="229" y="156">w1</text>
+    <text x="231" y="210">w2</text>
+    <text x="229" y="295">w3</text>
+  </g>
+
+  <!-- Sum and bias -->
+  <circle cx="355" cy="220" r="34" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
+  <text x="355" y="230" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="31" font-weight="700" fill="#92400e">Σ</text>
+  <circle cx="355" cy="375" r="25" fill="#ffedd5" stroke="#ea580c" stroke-width="2.5"/>
+  <text x="355" y="383" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="22" font-style="italic" fill="#9a3412">b</text>
+  <text x="355" y="105" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" fill="#475569">加权求和</text>
+
+  <!-- Activation -->
+  <rect x="515" y="165" width="185" height="110" rx="16" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/>
+  <text x="607.5" y="207" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="19" font-weight="700" fill="#5b21b6">激活函数</text>
+  <text x="607.5" y="243" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="24" fill="#5b21b6">a = σ(z)</text>
+
+  <!-- Output -->
+  <circle cx="830" cy="220" r="35" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+  <text x="830" y="229" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#166534">a</text>
+  <text x="830" y="285" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="18" fill="#475569">输出 Output</text>
+
+  <!-- Formula -->
+  <rect x="425" y="335" width="430" height="70" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="640" y="378" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="22" fill="#1e293b">z = w1x1 + w2x2 + w3x3 + b</text>
+</svg>

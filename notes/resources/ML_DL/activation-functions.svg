@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-labelledby="title desc">
+  <title id="title">三种常见激活函数</title>
+  <desc id="desc">从左到右分别展示 Sigmoid、Tanh 和 ReLU 激活函数的曲线。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="440" rx="18" fill="#f8fafc"/>
+  <text x="600" y="38" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#172033">三种常见激活函数</text>
+
+  <!-- Panel backgrounds -->
+  <g fill="#ffffff" stroke="#dbe3ee" stroke-width="2">
+    <rect x="30" y="62" width="350" height="350" rx="16"/>
+    <rect x="425" y="62" width="350" height="350" rx="16"/>
+    <rect x="820" y="62" width="350" height="350" rx="16"/>
+  </g>
+
+  <!-- Titles and formulas -->
+  <g font-family="DejaVu Sans, sans-serif" text-anchor="middle">
+    <text x="205" y="96" font-size="22" font-weight="700" fill="#2563eb">Sigmoid</text>
+    <text x="600" y="96" font-size="22" font-weight="700" fill="#db2777">Tanh</text>
+    <text x="995" y="96" font-size="22" font-weight="700" fill="#7c3aed">ReLU</text>
+  </g>
+
+  <!-- Sigmoid axes -->
+  <g stroke="#334155" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <line x1="82" y1="330" x2="352" y2="330"/>
+    <line x1="220" y1="350" x2="220" y2="138"/>
+    <line x1="477" y1="220" x2="747" y2="220"/>
+    <line x1="600" y1="350" x2="600" y2="138"/>
+    <line x1="872" y1="330" x2="1142" y2="330"/>
+    <line x1="980" y1="350" x2="980" y2="138"/>
+  </g>
+
+  <!-- Light guide lines -->
+  <g stroke="#dbe3ee" stroke-width="1" stroke-dasharray="5 5">
+    <line x1="90" y1="220" x2="350" y2="220"/>
+    <line x1="90" y1="110" x2="350" y2="110"/>
+    <line x1="470" y1="110" x2="750" y2="110"/>
+    <line x1="470" y1="330" x2="750" y2="330"/>
+    <line x1="850" y1="242" x2="1140" y2="242"/>
+    <line x1="850" y1="154" x2="1140" y2="154"/>
+  </g>
+
+  <!-- Curves -->
+  <polyline
+    points="100,328.5 112,327.6 124,326.0 136,323.5 148,319.6 160,313.3 172,303.8 184,289.9 196,270.8 208,246.9 220,220 232,193.1 244,169.2 256,149.9 268,136.2 280,126.7 292,120.4 304,116.4 316,114.0 328,112.4 340,111.5"
+    fill="none" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline
+    points="480,330.0 504,329.9 528,329.5 540,328.5 552,326.0 564,319.6 576,303.8 588,270.8 600,220 612,169.2 624,136.2 636,120.4 648,114.0 660,111.5 672,110.5 696,110.1 720,110.0"
+    fill="none" stroke="#db2777" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="860,330 980,330 1100,110" fill="none" stroke="#7c3aed" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Axis tick labels -->
+  <g font-family="DejaVu Sans, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">
+    <text x="100" y="350">−5</text><text x="220" y="350">0</text><text x="340" y="350">5</text>
+    <text x="480" y="240">−5</text><text x="600" y="240">0</text><text x="720" y="240">5</text>
+    <text x="860" y="350">−5</text><text x="980" y="350">0</text><text x="1100" y="350">5</text>
+  </g>
+  <g font-family="DejaVu Sans, sans-serif" font-size="14" fill="#64748b" text-anchor="end">
+    <text x="212" y="225">0.5</text><text x="212" y="115">1</text>
+    <text x="592" y="115">1</text><text x="592" y="335">−1</text>
+    <text x="972" y="247">2</text><text x="972" y="159">4</text>
+  </g>
+
+  <!-- Range summaries -->
+  <g font-family="DejaVu Sans, sans-serif" font-size="16" text-anchor="middle">
+    <text x="205" y="390" fill="#1e40af">Output range: (0, 1)</text>
+    <text x="600" y="390" fill="#9d174d">Output range: (−1, 1)</text>
+    <text x="995" y="390" fill="#5b21b6">Output range: [0, +∞)</text>
+  </g>
+</svg>

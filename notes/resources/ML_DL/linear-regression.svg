@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">线性回归示例</title>
+  <desc id="desc">三十个带有随机波动的数据点，以及拟合直线 y 等于 x 加 1。虚线表示预测值与真实数据之间的误差。</desc>
+
+  <rect width="960" height="600" rx="18" fill="#f8fafc"/>
+  <text x="480" y="38" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="25" font-weight="700" fill="#172033">用一条直线近似描述数据</text>
+
+  <!-- Grid -->
+  <g stroke="#dbe3ee" stroke-width="1">
+    <line x1="90" y1="520" x2="860" y2="520"/>
+    <line x1="90" y1="465" x2="860" y2="465"/>
+    <line x1="90" y1="410" x2="860" y2="410"/>
+    <line x1="90" y1="355" x2="860" y2="355"/>
+    <line x1="90" y1="300" x2="860" y2="300"/>
+    <line x1="90" y1="245" x2="860" y2="245"/>
+    <line x1="90" y1="190" x2="860" y2="190"/>
+    <line x1="90" y1="135" x2="860" y2="135"/>
+    <line x1="90" y1="80" x2="860" y2="80"/>
+
+    <line x1="90" y1="80" x2="90" y2="520"/>
+    <line x1="200" y1="80" x2="200" y2="520"/>
+    <line x1="310" y1="80" x2="310" y2="520"/>
+    <line x1="420" y1="80" x2="420" y2="520"/>
+    <line x1="530" y1="80" x2="530" y2="520"/>
+    <line x1="640" y1="80" x2="640" y2="520"/>
+    <line x1="750" y1="80" x2="750" y2="520"/>
+    <line x1="860" y1="80" x2="860" y2="520"/>
+  </g>
+
+  <!-- Axes -->
+  <g stroke="#293548" stroke-width="2.5">
+    <line x1="90" y1="520" x2="875" y2="520"/>
+    <line x1="90" y1="535" x2="90" y2="65"/>
+  </g>
+  <path d="M875 520 l-12 -7 v14 z" fill="#293548"/>
+  <path d="M90 65 l-7 12 h14 z" fill="#293548"/>
+
+  <!-- Tick labels -->
+  <g font-family="Noto Sans CJK SC, sans-serif" font-size="15" fill="#566176" text-anchor="middle">
+    <text x="90" y="545">0</text><text x="200" y="545">1</text><text x="310" y="545">2</text>
+    <text x="420" y="545">3</text><text x="530" y="545">4</text><text x="640" y="545">5</text>
+    <text x="750" y="545">6</text><text x="860" y="545">7</text>
+  </g>
+  <g font-family="Noto Sans CJK SC, sans-serif" font-size="15" fill="#566176" text-anchor="end">
+    <text x="77" y="525">0</text><text x="77" y="470">1</text><text x="77" y="415">2</text>
+    <text x="77" y="360">3</text><text x="77" y="305">4</text><text x="77" y="250">5</text>
+    <text x="77" y="195">6</text><text x="77" y="140">7</text><text x="77" y="85">8</text>
+  </g>
+  <text x="480" y="580" text-anchor="middle" font-family="Noto Sans CJK SC, sans-serif" font-size="19" fill="#293548">输入 x</text>
+  <text x="27" y="300" text-anchor="middle" transform="rotate(-90 27 300)" font-family="Noto Sans CJK SC, sans-serif" font-size="19" fill="#293548">输出 y</text>
+
+  <!-- Least-squares fitted line y = 0.999287x + 1.019933 -->
+  <line x1="90" y1="463.90" x2="860" y2="79.18" stroke="#2563eb" stroke-width="4"/>
+
+  <!-- Residuals -->
+  <g stroke="#f59e0b" stroke-width="1.7" stroke-dasharray="5 4" opacity="0.9">
+    <line x1="117.50" y1="450.16" x2="117.50" y2="434.20"/>
+    <line x1="137.30" y1="440.27" x2="137.30" y2="464.45"/>
+    <line x1="158.20" y1="429.83" x2="158.20" y2="426.50"/>
+    <line x1="175.80" y1="421.03" x2="175.80" y2="392.40"/>
+    <line x1="205.50" y1="406.19" x2="205.50" y2="418.80"/>
+    <line x1="219.80" y1="399.05" x2="219.80" y2="389.65"/>
+    <line x1="248.40" y1="384.76" x2="248.40" y2="405.60"/>
+    <line x1="267.10" y1="375.42" x2="267.10" y2="352.25"/>
+    <line x1="295.70" y1="361.13" x2="295.70" y2="368.75"/>
+    <line x1="314.40" y1="351.78" x2="314.40" y2="379.20"/>
+    <line x1="327.60" y1="345.19" x2="327.60" y2="330.80"/>
+    <line x1="357.30" y1="330.35" x2="357.30" y2="328.60"/>
+    <line x1="382.60" y1="317.71" x2="382.60" y2="335.75"/>
+    <line x1="399.10" y1="309.46" x2="399.10" y2="289.00"/>
+    <line x1="428.80" y1="294.62" x2="428.80" y2="297.80"/>
+    <line x1="449.70" y1="284.18" x2="449.70" y2="315.40"/>
+    <line x1="462.90" y1="277.59" x2="462.90" y2="265.90"/>
+    <line x1="491.50" y1="263.30" x2="491.50" y2="238.95"/>
+    <line x1="516.80" y1="250.66" x2="516.80" y2="266.45"/>
+    <line x1="533.30" y1="242.41" x2="533.30" y2="237.30"/>
+    <line x1="561.90" y1="228.12" x2="561.90" y2="252.70"/>
+    <line x1="581.70" y1="218.23" x2="581.70" y2="200.45"/>
+    <line x1="608.10" y1="205.04" x2="608.10" y2="210.90"/>
+    <line x1="635.60" y1="191.30" x2="635.60" y2="163.60"/>
+    <line x1="655.40" y1="181.41" x2="655.40" y2="203.20"/>
+    <line x1="682.90" y1="167.67" x2="682.90" y2="159.75"/>
+    <line x1="702.70" y1="157.77" x2="702.70" y2="171.85"/>
+    <line x1="731.30" y1="143.48" x2="731.30" y2="121.80"/>
+    <line x1="755.50" y1="131.39" x2="755.50" y2="140.50"/>
+    <line x1="784.10" y1="117.10" x2="784.10" y2="114.10"/>
+  </g>
+
+  <!-- 30 irregularly spaced data points -->
+  <g fill="#ef4444" stroke="#ffffff" stroke-width="3">
+    <circle cx="117.50" cy="434.20" r="6.5"/>
+    <circle cx="137.30" cy="464.45" r="6.5"/>
+    <circle cx="158.20" cy="426.50" r="6.5"/>
+    <circle cx="175.80" cy="392.40" r="6.5"/>
+    <circle cx="205.50" cy="418.80" r="6.5"/>
+    <circle cx="219.80" cy="389.65" r="6.5"/>
+    <circle cx="248.40" cy="405.60" r="6.5"/>
+    <circle cx="267.10" cy="352.25" r="6.5"/>
+    <circle cx="295.70" cy="368.75" r="6.5"/>
+    <circle cx="314.40" cy="379.20" r="6.5"/>
+    <circle cx="327.60" cy="330.80" r="6.5"/>
+    <circle cx="357.30" cy="328.60" r="6.5"/>
+    <circle cx="382.60" cy="335.75" r="6.5"/>
+    <circle cx="399.10" cy="289.00" r="6.5"/>
+    <circle cx="428.80" cy="297.80" r="6.5"/>
+    <circle cx="449.70" cy="315.40" r="6.5"/>
+    <circle cx="462.90" cy="265.90" r="6.5"/>
+    <circle cx="491.50" cy="238.95" r="6.5"/>
+    <circle cx="516.80" cy="266.45" r="6.5"/>
+    <circle cx="533.30" cy="237.30" r="6.5"/>
+    <circle cx="561.90" cy="252.70" r="6.5"/>
+    <circle cx="581.70" cy="200.45" r="6.5"/>
+    <circle cx="608.10" cy="210.90" r="6.5"/>
+    <circle cx="635.60" cy="163.60" r="6.5"/>
+    <circle cx="655.40" cy="203.20" r="6.5"/>
+    <circle cx="682.90" cy="159.75" r="6.5"/>
+    <circle cx="702.70" cy="171.85" r="6.5"/>
+    <circle cx="731.30" cy="121.80" r="6.5"/>
+    <circle cx="755.50" cy="140.50" r="6.5"/>
+    <circle cx="784.10" cy="114.10" r="6.5"/>
+  </g>
+
+  <!-- Legend -->
+  <g font-family="Noto Sans CJK SC, sans-serif" font-size="16" fill="#293548">
+    <circle cx="120" cy="98" r="7" fill="#ef4444"/>
+    <text x="136" y="104">真实数据</text>
+    <line x1="120" y1="124" x2="160" y2="124" stroke="#2563eb" stroke-width="4"/>
+    <text x="170" y="130">拟合直线 ŷ = 1.00x + 1.02</text>
+  </g>
+</svg>

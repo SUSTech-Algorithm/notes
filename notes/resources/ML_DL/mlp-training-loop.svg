@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">MLP 的一次参数更新</title>
+  <desc id="desc">上半部分是前向传播：输入数据经过神经网络得到预测并计算损失。下半部分是反向传播：误差影响向输入方向逐层传回并得到梯度。优化方法根据梯度更新参数，然后进入下一轮。</desc>
+
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1f2937" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#ea580c"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="520" rx="24" fill="#f8fafc"/>
+  <text x="600" y="42" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="25" font-weight="700" fill="#172554">MLP 的一次参数更新</text>
+
+  <!-- Forward propagation -->
+  <rect x="48" y="65" width="1104" height="190" rx="20" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+  <rect x="68" y="80" width="300" height="38" rx="19" fill="#2563eb"/>
+  <text x="218" y="106" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#ffffff">前向传播 Forward propagation</text>
+
+  <g filter="url(#shadow)" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+    <rect x="82" y="140" width="210" height="80" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="187" y="174" text-anchor="middle" font-size="21" font-weight="700" fill="#1e3a8a">输入数据</text>
+    <text x="187" y="201" text-anchor="middle" font-size="15" fill="#475569">x</text>
+
+    <rect x="354" y="140" width="210" height="80" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="459" y="174" text-anchor="middle" font-size="21" font-weight="700" fill="#1e3a8a">逐层计算</text>
+    <text x="459" y="201" text-anchor="middle" font-size="15" fill="#475569">权重、偏置与激活函数</text>
+
+    <rect x="626" y="140" width="210" height="80" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="731" y="174" text-anchor="middle" font-size="21" font-weight="700" fill="#1e3a8a">得到预测</text>
+    <text x="731" y="201" text-anchor="middle" font-size="15" fill="#475569">ŷ</text>
+
+    <rect x="898" y="140" width="210" height="80" rx="14" fill="#ffffff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="1003" y="174" text-anchor="middle" font-size="21" font-weight="700" fill="#1e3a8a">计算损失</text>
+    <text x="1003" y="201" text-anchor="middle" font-size="15" fill="#475569">预测与正确答案的差距</text>
+  </g>
+
+  <g fill="none" stroke="#2563eb" stroke-width="4">
+    <path d="M300 180 H338"/>
+    <path d="M572 180 H610"/>
+    <path d="M844 180 H882"/>
+  </g>
+  <g fill="#2563eb">
+    <path d="M338 173 L350 180 L338 187 Z"/>
+    <path d="M610 173 L622 180 L610 187 Z"/>
+    <path d="M882 173 L894 180 L882 187 Z"/>
+  </g>
+
+  <!-- Backpropagation -->
+  <rect x="572" y="284" width="580" height="176" rx="20" fill="#fff7ed" stroke="#fed7aa" stroke-width="2"/>
+  <rect x="592" y="300" width="245" height="38" rx="19" fill="#ea580c"/>
+  <text x="714" y="326" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#ffffff">反向传播 Backpropagation</text>
+
+  <g filter="url(#shadow)" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+    <rect x="898" y="360" width="210" height="70" rx="14" fill="#ffffff" stroke="#fdba74" stroke-width="2"/>
+    <text x="1003" y="389" text-anchor="middle" font-size="20" font-weight="700" fill="#9a3412">误差影响逐层传回</text>
+    <text x="1003" y="414" text-anchor="middle" font-size="14" fill="#64748b">从输出层向输入层</text>
+
+    <rect x="626" y="360" width="210" height="70" rx="14" fill="#ffffff" stroke="#fdba74" stroke-width="2"/>
+    <text x="731" y="389" text-anchor="middle" font-size="20" font-weight="700" fill="#9a3412">得到各参数的梯度</text>
+    <text x="731" y="414" text-anchor="middle" font-size="14" fill="#64748b">判断应该向哪个方向调整</text>
+  </g>
+
+  <path d="M1003 228 V344" fill="none" stroke="#ea580c" stroke-width="4"/>
+  <path d="M996 344 L1003 356 L1010 344 Z" fill="#ea580c"/>
+  <path d="M886 395 H852" fill="none" stroke="#ea580c" stroke-width="4"/>
+  <path d="M852 388 L840 395 L852 402 Z" fill="#ea580c"/>
+
+  <!-- Optimizer and next iteration -->
+  <g filter="url(#shadow)" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+    <rect x="322" y="360" width="210" height="70" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+    <text x="427" y="389" text-anchor="middle" font-size="20" font-weight="700" fill="#166534">优化方法更新参数</text>
+    <text x="427" y="414" text-anchor="middle" font-size="14" fill="#64748b">例如：梯度下降</text>
+
+    <rect x="82" y="360" width="180" height="70" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="172" y="402" text-anchor="middle" font-size="20" font-weight="700" fill="#334155">进入下一轮</text>
+  </g>
+
+  <path d="M614 395 H548" fill="none" stroke="#16a34a" stroke-width="4"/>
+  <path d="M548 388 L536 395 L548 402 Z" fill="#16a34a"/>
+  <path d="M310 395 H278" fill="none" stroke="#64748b" stroke-width="4"/>
+  <path d="M278 388 L266 395 L278 402 Z" fill="#64748b"/>
+  <path d="M172 348 C172 296, 187 286, 187 236" fill="none" stroke="#64748b" stroke-width="3" stroke-dasharray="7 6"/>
+  <path d="M180 236 L187 224 L194 236 Z" fill="#64748b"/>
+
+  <text x="299" y="481" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="15" fill="#475569">反向传播计算梯度；优化方法根据梯度更新参数</text>
+</svg>

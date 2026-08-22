@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="460" viewBox="0 0 1100 460" role="img" aria-labelledby="title desc">
+  <title id="title">RNN 沿时间展开的结构</title>
+  <desc id="desc">同一个 RNN 单元在四个时间步重复使用。每个时间步接收当前输入和上一时间步的隐藏状态，产生当前输出和新的隐藏状态。</desc>
+  <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#1e293b" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="1100" height="460" rx="24" fill="#f8fafc"/>
+  <text x="550" y="43" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="26" font-weight="700" fill="#172554">RNN 按顺序读取一段序列</text>
+
+  <rect x="292" y="65" width="516" height="43" rx="15" fill="#eef2ff" stroke="#c7d2fe" stroke-width="2"/>
+  <text x="550" y="93" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="17" fill="#3730a3">图中四个方块是同一个 RNN 单元在不同时间步的展开</text>
+
+  <!-- Recurrent cells -->
+  <g filter="url(#shadow)" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+    <rect x="120" y="184" width="150" height="92" rx="18" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
+    <rect x="355" y="184" width="150" height="92" rx="18" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
+    <rect x="590" y="184" width="150" height="92" rx="18" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
+    <rect x="825" y="184" width="150" height="92" rx="18" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
+    <g text-anchor="middle" fill="#1e40af">
+      <text x="195" y="225" font-size="22" font-weight="700">RNN</text><text x="195" y="254" font-size="16">时间步 1</text>
+      <text x="430" y="225" font-size="22" font-weight="700">RNN</text><text x="430" y="254" font-size="16">时间步 2</text>
+      <text x="665" y="225" font-size="22" font-weight="700">RNN</text><text x="665" y="254" font-size="16">时间步 3</text>
+      <text x="900" y="225" font-size="22" font-weight="700">RNN</text><text x="900" y="254" font-size="16">时间步 4</text>
+    </g>
+  </g>
+
+  <!-- Hidden-state arrows -->
+  <g fill="none" stroke="#f97316" stroke-width="5" stroke-linecap="round">
+    <path d="M55 230 H105"/><path d="M282 230 H340"/><path d="M517 230 H575"/><path d="M752 230 H810"/><path d="M987 230 H1045"/>
+  </g>
+  <g fill="#f97316">
+    <path d="M105 222 L118 230 L105 238 Z"/><path d="M340 222 L353 230 L340 238 Z"/>
+    <path d="M575 222 L588 230 L575 238 Z"/><path d="M810 222 L823 230 L810 238 Z"/>
+    <path d="M1045 222 L1058 230 L1045 238 Z"/>
+  </g>
+  <g font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="17" font-weight="700" fill="#c2410c" text-anchor="middle">
+    <text x="78" y="215">h0</text><text x="311" y="215">h1</text><text x="546" y="215">h2</text>
+    <text x="781" y="215">h3</text><text x="1016" y="215">h4</text>
+  </g>
+
+  <!-- Inputs -->
+  <g filter="url(#shadow)" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+    <rect x="143" y="340" width="104" height="50" rx="14" fill="#ecfdf5" stroke="#34d399" stroke-width="2.5"/>
+    <rect x="378" y="340" width="104" height="50" rx="14" fill="#ecfdf5" stroke="#34d399" stroke-width="2.5"/>
+    <rect x="613" y="340" width="104" height="50" rx="14" fill="#ecfdf5" stroke="#34d399" stroke-width="2.5"/>
+    <rect x="848" y="340" width="104" height="50" rx="14" fill="#ecfdf5" stroke="#34d399" stroke-width="2.5"/>
+    <g text-anchor="middle" font-size="19" font-weight="700" fill="#047857">
+      <text x="195" y="373">输入 x1</text><text x="430" y="373">输入 x2</text>
+      <text x="665" y="373">输入 x3</text><text x="900" y="373">输入 x4</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#10b981" stroke-width="4">
+    <path d="M195 338 V292"/><path d="M430 338 V292"/><path d="M665 338 V292"/><path d="M900 338 V292"/>
+  </g>
+  <g fill="#10b981">
+    <path d="M188 292 L195 280 L202 292 Z"/><path d="M423 292 L430 280 L437 292 Z"/>
+    <path d="M658 292 L665 280 L672 292 Z"/><path d="M893 292 L900 280 L907 292 Z"/>
+  </g>
+
+  <!-- Outputs -->
+  <g filter="url(#shadow)" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif">
+    <rect x="143" y="120" width="104" height="43" rx="13" fill="#fff1f2" stroke="#fb7185" stroke-width="2.5"/>
+    <rect x="378" y="120" width="104" height="43" rx="13" fill="#fff1f2" stroke="#fb7185" stroke-width="2.5"/>
+    <rect x="613" y="120" width="104" height="43" rx="13" fill="#fff1f2" stroke="#fb7185" stroke-width="2.5"/>
+    <rect x="848" y="120" width="104" height="43" rx="13" fill="#fff1f2" stroke="#fb7185" stroke-width="2.5"/>
+    <g text-anchor="middle" font-size="18" font-weight="700" fill="#be123c">
+      <text x="195" y="149">输出 y1</text><text x="430" y="149">输出 y2</text>
+      <text x="665" y="149">输出 y3</text><text x="900" y="149">输出 y4</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#f43f5e" stroke-width="4">
+    <path d="M195 182 V176"/><path d="M430 182 V176"/><path d="M665 182 V176"/><path d="M900 182 V176"/>
+  </g>
+  <g fill="#f43f5e">
+    <path d="M188 176 L195 164 L202 176 Z"/><path d="M423 176 L430 164 L437 176 Z"/>
+    <path d="M658 176 L665 164 L672 176 Z"/><path d="M893 176 L900 164 L907 176 Z"/>
+  </g>
+
+  <text x="550" y="431" text-anchor="middle" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="17" fill="#475569">隐藏状态 h 像一份“压缩的记忆”，将前面的信息传给后面</text>
+</svg>
